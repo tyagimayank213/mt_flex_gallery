@@ -1,0 +1,87 @@
+*{
+    font-family: 'Shadows Into Light';
+    margin:0;
+    padding: 0;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+.panels{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+.panel{
+    background-color: #103549;
+    color: #ffee55;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    transition: 
+    font-size 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+    background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.panel1{
+    background-image: url(../image/inline_image_preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panel2{
+    background-image: url(../image/istockphoto-1267183867-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panel3{
+    background-image: url(../image/FOUR-LAKES-HIKE-engelberg-07522.jpg.optimal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panel4{
+    background-image: url(../image/close-up-dog-face-puppy-wallpaper-11555169620lx4tzmxmu3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panel5{
+    background-image: url(../image/HD-wallpaper-winter-fence-sun-woods-mountain-path-coldness-skyphoenixx1-way-hill-frost-forest-sky-trees-snow-ice-sunshine-nature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.panel > *{
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel > *:first-child{
+    transform: translateY(-100%);
+}
+.panel.openactive > *:first-child{
+    transform: translateY(0);
+}
+.panel > *:last-child{
+    transform: translateY(100%);
+}
+.panel.openactive > *:last-child{
+    transform: translateY(0);
+}
+.panel p{
+    font-size: 1.5em;
+    font-family: 'Shadows Into Light';
+}
+.panel p:nth-child(2){
+    font-size: 3em;
+}
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+}
